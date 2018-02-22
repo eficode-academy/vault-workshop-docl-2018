@@ -1,0 +1,29 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: vault-ui
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: vault-ui
+    spec:
+      containers:
+      - name: vault-ui
+        image: djenriquez/vault-ui:latest
+        resources:
+          limits:
+            memory: 256Mi
+            cpu: "250m"
+          requests:
+            memory: 128Mi
+            cpu: "100m"
+        ports:
+        - containerPort: 8000
+          name: vault-ui
+        env:
+        - name: VAULT_URL_DEFAULT
+          value: "http://vault.default.svc.cluster.local:8200"
+        - name: VAULT_AUTH_DEFAULT
+          value: "USERNAMEPASSWORD"
