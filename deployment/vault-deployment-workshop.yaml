@@ -25,15 +25,15 @@ spec:
           name: vault
         securityContext:
           privileged: true
-        volumeMounts:
-        - name: vault-storage
-          mountPath: /vault/file/
-        - name: vault-config
-          mountPath: /vault/config/
-      volumes:
-      - name: vault-storage
-        persistentVolumeClaim:
-          claimName: vault-storage-pv-claim
-      - name: vault-config
-        configMap:
-          name: vault-config
+#        volumeMounts:
+#        - name: vault-storage
+#          mountPath: /vault/file/
+#        - name: vault-config
+#          mountPath: /vault/config/
+#      volumes:
+#      - name: vault-storage
+#        persistentVolumeClaim:
+#          claimName: vault-storage-pv-claim
+#      - name: vault-config
+#        configMap:
+#          name: vault-config
