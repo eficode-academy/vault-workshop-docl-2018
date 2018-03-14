@@ -1,18 +1,16 @@
 # Kubernetes
 
 ## Prerequsites
-Before deploying this to Kubernetes, please ensure that the Docker hub organization in the following two files are change to use fareoffice instead of hoeghh which is used under development.
+A Kubernetes cluster up and running
+- Ingress controller or cloud load balancer
+- Kubectl configured
 
-```
-./deployment/vault-deployment.yaml
-./deployment/vault-ui-deployment.yaml
-```
 
-## Deploy to cluster
-Run the `deploy.sh` to create the Kubernetes objects in the cluster.
+## Getting started with the workshop
+In the folder docs, you will find two documents. One contains the slides used in the workshop, and the other is the lab workbook. The labbook will guide you through the workshop, step by step.
 
-## Delete from cluster
-Run the file `delete.sh` to delete the Kubernetes objects from the cluster.
+## Cleanup
+When you are done, you can remove Vault and Vault-ui by running the script `delete-workshop.sh`. This will delete the Kubernetes objects from the cluster.
 
 # -workshop files
 Some files will have or use a `-workshop` edition. These will setup and tear down the cluster within the scope of the workshop.
