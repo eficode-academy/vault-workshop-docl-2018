@@ -12,3 +12,4 @@ kubectl delete -f sa/vault-admin.yaml
 kubectl delete -f sa/vault-auth.yaml
 kubectl delete -f sa/vault-dev.yaml
 kubectl delete -f clusterrolebinding/vault-auth-crb.yaml
+kubectl delete -f deployment/nwtool-deployment.yaml
