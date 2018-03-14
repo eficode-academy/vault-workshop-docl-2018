@@ -7,3 +7,8 @@ kubectl delete -f services/vault-ui-service.yaml
 kubectl delete -f deployment/vault-deployment.yaml
 kubectl delete -f deployment/vault-ui-deployment.yaml
 kubectl delete -f ingress/vault-ui-ingress.yaml
+kubectl delete -f sa/vault-admin.yaml
+kubectl delete -f sa/vault-auth.yaml
+kubectl delete -f sa/vault-dev.yaml
+kubectl delete -f clusterrolebinding/vault-auth-crb.yaml
+
