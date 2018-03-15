@@ -3,11 +3,14 @@ kind: Ingress
 metadata:
   name: vault-ui
 spec:
+  backend:
+    serviceName: vault-ui
+    servicePort: 8000
   rules:
   - host: vault-ui.example.com
     http:
       paths:
-      - path: /
+      - path: /*
         backend:
           serviceName: vault-ui
           servicePort: 8000
